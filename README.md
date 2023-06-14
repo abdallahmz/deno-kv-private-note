@@ -24,6 +24,6 @@ By combining these security measures, we ensure that your notes remain private a
 
 **Author:** [ab6d](https://github.com/ab6d)
 For the Deno KV hackathon.
-Access [here](dry-fox-30.deno.dev)
+Access here: dry-fox-30.deno.dev
 Chat GPT used for some of the "How it works" text, the Loader, and some Tailwind snippets.
 Source from [Brady Joslin's article](https://bradyjoslin.com/blog/encryption-webcrypto/) for most of the crypto algorithms.
