@@ -19,6 +19,9 @@ By combining these security measures, we ensure that your notes remain private a
 **"I don't see my text?"** Make sure you enter the same password you used to create the note. To ensure you log into the correct note, you can save and copy your public identifier on your end and verify that the public identifier is the same after you login.
 
 **Author:** [ab6d](https://github.com/ab6d)
+
 For the Deno KV hackathon.
+
 Chat GPT used for some of the "How it works" text, the Loader, and some Tailwind snippets.
+
 Source from [Brady Joslin's article](https://bradyjoslin.com/blog/encryption-webcrypto/) for most of the crypto algorithms.
