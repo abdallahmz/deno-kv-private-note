@@ -1,6 +1,6 @@
 # Deno Zero Knowledge Private Note Service
 
-The Note Service that respects your privacy. Zero-knowledge achieved through browser-based encryption.
+The Note Service that respects your privacy. Zero-knowledge achieved through browser-based encryption. It means that even if someone has access to the database, they can't read your messages.
 
 ## How It Works
 
