@@ -4,7 +4,7 @@ The Note Service that respects your privacy. Zero-knowledge achieved through bro
 
 ![Insert password screenshot](./docs/private-note-1.PNG)
 
-![Type note screenshot](./docs/private-note-1.PNG)
+![Type note screenshot](./docs/private-note-2.PNG)
 
 ## How It Works
 
