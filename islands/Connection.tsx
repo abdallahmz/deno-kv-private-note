@@ -33,6 +33,7 @@ export default function Connection () {
   const [ encryptedPassword, setEncryptedPassword ] = useState( '' );
   const [ saving, setSaving ] = useState( false );
   const [ loading, setLoading ] = useState( true );
+  const [ showPassword, setShowPassword ] = useState( false );
 
   useEffect( () => {
     if ( !IS_BROWSER ) {
@@ -42,6 +43,10 @@ export default function Connection () {
     setIdentifier( getIdentifier() || '' )
     setLoading( false );
   }, [] );
+
+  const togglePasswordVisibility = () => {
+    setShowPassword( !showPassword );
+  }
 
   const onInput = ( e: any ) => {
       setText(e.target.value)
@@ -73,25 +78,42 @@ export default function Connection () {
   }
 return (
   <div class="flex flex-col gap-2 w-full my-3">
-    <form>
-      <label for="password" class="block mb-2 text-lg font-semibold text-gray-900">Enter your password to access your note:</label>
-      <div class="flex flex-row">
+<form>
+  <label for="password" class="block mb-2 text-lg font-semibold text-gray-900">Enter your password to access your note:</label>
+    <div class="flex flex-row">
+      <input
+        type="password"
+        maxLength={100}
+        onInput={onInput}
+        id="password" 
+        class="bg-gray-100 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-3 border border-gray-300 focus:outline-none"
+        required
+      />
+      <div class="relative">
         <input
-          type="password"
+          type="text"
           onInput={onInput}
-          id="password" 
-          class="bg-gray-100 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-3 border border-gray-300 focus:outline-none"
-          required
+          id="passwordVisible"
+          class="bg-gray-100 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-3 border border-gray-300 focus:outline-none absolute top-0 left-0 opacity-0 pointer-events-none"
         />
-        <button
-          onClick={onSubmit}
-          class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded mx-3"
-          type="submit"
+        <span
+          type=""
+          onClick={togglePasswordVisibility}
+          class="absolute top-2 right-2 text-gray-500 hover:text-gray-700 focus:outline-none"
+          aria-label="Toggle Password Visibility"
         >
-          Submit
-        </button>
+          {showPassword ? '🙈' : '👁️'}
+        </span>
       </div>
-    </form>
+      <button
+        onClick={onSubmit}
+        class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded mx-3"
+        type="submit"
+      >
+        Submit
+      </button>
+    </div>
+  </form>
   </div>
 );
 }

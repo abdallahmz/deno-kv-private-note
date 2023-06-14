@@ -1,6 +1,10 @@
 # Deno Zero Knowledge Private Note Service
 
-The Note Service that respects your privacy. Zero-knowledge achieved through browser-based encryption. It means that even if someone has access to the database, they can't read your messages.
+The Note Service that respects your privacy. Zero-knowledge achieved through browser-based encryption.
+
+![Insert password screenshot](./docs/private-note-1.PNG)
+
+![Type note screenshot](./docs/private-note-1.PNG)
 
 ## How It Works
 
@@ -19,9 +23,7 @@ By combining these security measures, we ensure that your notes remain private a
 **"I don't see my text?"** Make sure you enter the same password you used to create the note. To ensure you log into the correct note, you can save and copy your public identifier on your end and verify that the public identifier is the same after you login.
 
 **Author:** [ab6d](https://github.com/ab6d)
-
 For the Deno KV hackathon.
-
+Access [here](dry-fox-30.deno.dev)
 Chat GPT used for some of the "How it works" text, the Loader, and some Tailwind snippets.
-
 Source from [Brady Joslin's article](https://bradyjoslin.com/blog/encryption-webcrypto/) for most of the crypto algorithms.

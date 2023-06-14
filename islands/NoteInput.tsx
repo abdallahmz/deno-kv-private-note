@@ -145,21 +145,23 @@ export default function NoteInput () {
         </div>
       </form>
 
-      <p class="text-gray-800 mr-2">My Public Identifier (used only to check "where" you're logged in)</p>
-      <div class="relative">
-        <input
-          type="text"
-          value={identifier}
-          class="bg-gray-100 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-3"
-          readonly
-        />
-        <button
-          class="absolute right-2 top-2 text-gray-500 hover:text-gray-700"
-          onClick={copyIdentifier}
-          aria-label="Copy Public Key"
-        >
-          Copy to clipboard
-        </button>
+      <div class="m-3">
+        <p class="text-gray-800 mr-2">My Public Identifier (used only to check "where" you're logged in)</p>
+        <div class="flex-row items-center">
+          <input
+            type="text"
+            value={identifier}
+            class="bg-gray-100 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 inline-block max-w p-3"
+            readonly
+          />
+          <button
+            class="text-gray-500 hover:text-gray-700 ml-2"
+            onClick={copyIdentifier}
+            aria-label="Copy Public Key"
+          >
+            Copy to clipboard
+          </button>
+        </div>
       </div>
     </div>
   );
