@@ -5,12 +5,11 @@ export const handler: Handlers = {
     async GET(_req, ctx) {
       const encryptedNote = await getEncryptedNote(ctx.params.id);
     
-      // Access the identifier value and perform your logic
       const body = { encryptedData: encryptedNote };
       return new Response(JSON.stringify(body));
     },
     async POST(req, ctx) {
-        const { encryptedData } = await req.json();
+      const { encryptedData } = await req.json();
         
       postEncryptedNote(ctx.params.id, encryptedData);
       return new Response("Note created successfully", { status: 201 });
