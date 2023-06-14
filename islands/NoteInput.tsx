@@ -35,9 +35,9 @@ export default function NoteInput () {
   
   const saveJournal = async () => {
     if ( !encryptedPassword ) {
-      throw new Error( 'Cannot save journal without private key' );
+      throw new Error( 'Cannot save note without private key' );
     }
-    // Encrypt the journal input using the password-derived key
+
     const encryptedData = await encryptNote( note, encryptedPassword );
     
     const response = await fetch('/api/note/' + identifier, {
@@ -54,13 +54,10 @@ export default function NoteInput () {
       throw new Error('Failed to submit note data');
     }
 
-    // Clear the journal input
     setSynced( true );
   };
 
   const loadJournal = async (identifier: string, encryptedPassword: string) => {
-    // Retrieve the encrypted data from the server
-    // ... (Implement your server-side code to retrieve the encrypted data)
     if ( !identifier ) {
       console.debug( 'Cannot fetch journal without public key' );
       return;
@@ -81,7 +78,6 @@ export default function NoteInput () {
       return;
     }
   
-    // Decrypt the retrieved data using the password-derived key
     const decryptedData = await decryptNote( data.encryptedData, encryptedPassword );
     
     setNote( decryptedData );
