@@ -2,6 +2,9 @@ export default function HowItWorks () {
   return (
     <div>
       <h2 class="text-2xl font-bold mb-4">How It Works</h2>
+
+      <p class="my-2">Zero-knowledge means no one can access your messages without your password, even if someone else steals data from the database.</p>
+
       <p class="mb-2">
         <strong>This application is provided as is without any guarantee. There are still improvements to be done to ensure the actual security of the data.</strong>
     </p>
